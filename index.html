@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0077c8">
+  <meta name="description" content="Choose your preferred language.">
+  <title>Choose Your Language</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <div class="background-overlay" aria-hidden="true"></div>
+
+    <section class="language-card" aria-labelledby="page-title">
+      <img class="logo" src="assets/nyl-logo.png" alt="New York Life">
+
+      <div class="heading-group">
+        <h1 id="page-title">Choose your preferred language</h1>
+        <p>Seleccione su idioma preferido</p>
+      </div>
+
+      <nav class="language-grid" aria-label="Language selection">
+        <a class="language-button" href="https://www.newyorklife.com/agent/ykim22">
+          <span class="language-name">English</span>
+        </a>
+
+        <!-- Replace the # below with your Spanish destination URL. -->
+        <a class="language-button" href="#" data-needs-url="true">
+          <span class="language-name">Español</span>
+        </a>
+
+        <!-- Future-language examples. Remove the hidden attribute when ready. -->
+        <a class="language-button" href="#" hidden>
+          <span class="language-name">中文</span>
+        </a>
+        <a class="language-button" href="#" hidden>
+          <span class="language-name">Tiếng Việt</span>
+        </a>
+        <a class="language-button" href="#" hidden>
+          <span class="language-name">日本語</span>
+        </a>
+      </nav>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('[data-needs-url="true"]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        if (link.getAttribute('href') === '#') {
+          event.preventDefault();
+          alert('This language page is coming soon.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

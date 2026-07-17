@@ -122,9 +122,14 @@ body {
 }
 
 .language-name {
-  font-size: clamp(2rem, 10vw, 3.6rem);
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  font-size: clamp(2rem, 7vw, 3.25rem);
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 [hidden] {
@@ -138,7 +143,11 @@ body {
   }
 
   .language-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+  }
+
+  .language-name {
+    font-size: clamp(2rem, 4vw, 3rem);
   }
 }
 
